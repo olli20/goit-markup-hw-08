@@ -1,0 +1,153 @@
+.page-footer {
+    padding: 60px 0px;
+    background-color: getColor('background-dark');
+}
+
+.page-footer__flex-container {
+    display: flex;
+    align-items: baseline;
+}
+
+
+// mix
+.page-footer__address {
+    margin-right: 87px;
+}
+
+.address__logo {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.address__list {
+    @extend %list;
+}
+
+.address__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.media__subtitle {
+    margin-bottom: 20px;
+}
+
+.address__link {
+    @extend %link;
+
+    color: rgba(255, 255, 255, 0.6);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    &--white {
+        color: getColor('white');
+    }
+}
+
+.media__list {
+    @extend %list;
+    @extend %center-flex-container;
+}
+
+.media__item {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &:not(:last-child) {
+        margin-right: 10px; 
+    }
+}
+
+.media__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    fill: getColor('white');
+    border-radius: 50%;
+
+    transition: background-color 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        background-color: getColor('accent');
+    }
+}
+
+/* =========== SUBSCRIPTION FORM =========== */
+
+// mix
+.page-footer__subscr-form {
+    margin-left: auto;
+}
+
+.subscr-form__subtitle {   
+    margin-bottom: 20px;
+}
+
+.subscr-form__body {
+    display: flex;
+    align-items: center;
+}
+
+.subscr-form__field {
+    position: relative;
+    width: 358px;
+    height: 50px;
+    margin-right: 12px;
+}
+
+.subscr-form__input {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    padding-left: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    background-color: inherit;
+
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+
+    transition: outline 250ms $timing-function;
+
+    &:focus {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            outline-color: getColor('white');
+            outline-style: solid;
+        }
+}
+
+.subscr-form__label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+
+    opacity: 1;
+
+    transition: opacity 250ms $timing-function;
+
+    .subscr-form__input:focus + &,
+    .subscr-form__input:not(:placeholder-shown) + & {
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+/* =========== / SUBSCRIPTION FORM =========== */
+

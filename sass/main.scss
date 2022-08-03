@@ -1,0 +1,31 @@
+@import "./utils/variables";
+@import "./base/normalize";
+@import "./utils/placeholders";
+@import "./utils/reset";
+@import "./utils/utils";
+
+@import "./components/logo";
+@import "./components/basic-button";
+@import "./components/titles";
+
+// HEADER
+@import "./components/page-header";
+
+// PAGE INDEX 
+@import "./components/hero";
+@import "./components/modal";
+@import "./components/order-form";
+
+@import "./components/benefits";
+@import "./components/work";
+@import "./components/team";
+@import "./components/clients";
+
+
+// PAGE PORTFOLIO
+@import "./components/portfolio";
+@import "./components/filter-menu";
+@import "./components/gallery";
+
+// FOOTER
+@import "./components/page-footer";

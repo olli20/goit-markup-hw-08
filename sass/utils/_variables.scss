@@ -1,0 +1,26 @@
+$timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+$font-primary: 'Roboto', sans-serif;
+
+// map
+// key: value
+$colors: (
+    'accent': #2196F3,
+    'text-primary': #212121,
+    'text-secondary': #757575,
+    'background-dark': #2F303A,
+    'background-light': #F5F4FA,
+    'basic-button-hover': #188CE8,
+    'icon-passive': #AFB1B8,
+    'black': #000000,
+    'white': #FFFFFF
+);
+
+// function
+@function getColor($key) {
+    @return map-get($colors, $key);
+}
+
+// usage 
+// {color: getColor('accent');}
+
+// імена змінних https://webdesign.tutsplus.com/articles/quick-tip-name-your-sass-variables-modularly--webdesign-13364
