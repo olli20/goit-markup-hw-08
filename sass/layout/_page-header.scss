@@ -1,0 +1,9 @@
+.page-header {
+    position: relative;
+    height: 80px;
+    border-bottom: 1px solid #ECECEC;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+        height: 60px;
+    }
+}

@@ -1,0 +1,19 @@
+.team {
+    background-color: getColor('background-light');
+}
+
+.team__title {
+    margin-bottom: 30px;
+}
+
+.team__list {
+    @extend %list;
+}
+
+.work__item {
+    width: 100%;
+}
+
+.work__img {
+    width: 100%;
+}

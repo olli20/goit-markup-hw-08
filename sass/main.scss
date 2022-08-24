@@ -1,0 +1,26 @@
+@import "./utils/variables";
+@import "./base/normalize";
+@import "./utils/placeholders";
+@import "./base/common";
+@import "./utils/utils";
+@import "./utils/visually-hidden";
+
+@import "./base/container";
+@import "./base/section";
+@import "./components/logo";
+@import "./components/basic-button";
+@import "./components/titles";
+
+// HEADER
+@import "./layout/page-header";
+@import "./layout/menu";
+
+// PAGE LAYOUT 
+@import "./layout/hero";
+@import "./layout/modal";
+@import "./layout/order-form";
+@import "./layout/benefits";
+@import "./layout/work";
+@import "./layout/team";
+@import "./layout/clients";
+

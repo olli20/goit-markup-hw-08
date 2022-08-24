@@ -1,13 +1,15 @@
 .logo {
     @extend %link;
-    
+
+    display: block;
+
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: getColor('accent');
-    
+
     &--light-theme {
         color: getColor('black');
     }
@@ -15,8 +17,4 @@
     &--dark-theme {
         color: getColor('white');
     }
-}
-
-.page-nav__logo {
-    
 }

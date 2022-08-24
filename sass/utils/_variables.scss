@@ -1,6 +1,10 @@
 $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 $font-primary: 'Roboto', sans-serif;
 
+$mobile: 480px;
+$tablet: 786px;
+$desktop: 1200px;
+
 // map
 // key: value
 $colors: (
@@ -22,5 +26,3 @@ $colors: (
 
 // usage 
 // {color: getColor('accent');}
-
-// імена змінних https://webdesign.tutsplus.com/articles/quick-tip-name-your-sass-variables-modularly--webdesign-13364
