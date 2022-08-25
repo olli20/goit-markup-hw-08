@@ -76,12 +76,17 @@
                     data-menu-button
                 >
                 <svg width="40" height="40" aria-label="Mobile Menu Switcher">
-                    <use class="icon-open" href="./images/sprite-before-optimisation.svg#menu"></use>
-                    <use class="icon-close" href="./images/sprite-before-optimisation.svg#close"></use>
+                    <use class="icon-open" 
+                        href="./images/sprite-before-optimisation.svg#menu">
+                    </use>
+                    <use class="icon-close" 
+                        href="./images/sprite-before-optimisation.svg#close">
+                    </use>
                 </svg>
                 
                 </button>
             </nav>
+            
     </header>
 
     <!-- MAIN CONTENT -->
@@ -89,7 +94,7 @@
 
         <!-- HERO -->
         <section class="hero">
-                <div class="container">
+                <div class="container hero__container">
                     <h1 class="hero__title">Ефективні рішення<br /> для вашого бізнесу</h1>
                     <button class="basic-button hero__basic-button" data-modal-open type="button">Замовити послугу</button>
                 </div>
@@ -226,7 +231,8 @@
                 <h2 class="title--light-theme team__title">Наша команда</h2>
                 <ul class="team__list">
                     <li class="team__item">
-                        <img class="team__photo" src="./images/team/igor-demianenko.jpg" alt="Фотографія Ігоря Дем'яненка" width="270">
+                        <img class="team__photo" 
+                            src="./images/team/igor-demianenko.jpg" alt="Фотографія Ігоря Дем'яненка" width="">
                         <div class="team__meta">
                             <h3 class="team__name">Ігор Дем'яненко</h3>
                             <p class="team__role" lang="en">Product Designer</p>
@@ -265,7 +271,8 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img class="team__photo" src="./images/team/olga-repina.jpg" alt="Фотографія Ольги Репіної" width="270">
+                        <img class="team__photo" 
+                            src="./images/team/olga-repina.jpg" alt="Фотографія Ольги Репіної" width="">
                         <div class="team__meta">
                             <h3 class="team__name">Ольга Репіна</h3>
                             <p class="team__role" lang="en">Frontend Developer</p>
@@ -304,7 +311,8 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img class="team__photo" src="./images/team/mykola-tarasov.jpg" alt="Фотографія Миколи Тарасова" width="270">
+                        <img class="team__photo" 
+                            src="./images/team/mykola-tarasov.jpg" alt="Фотографія Миколи Тарасова" width="">
                         <div class="team__meta">
                             <h3 class="team__name">Микола Тарасов</h3>
                             <p class="team__role" lang="en">Marketing</p>
@@ -343,7 +351,8 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img class="team__photo" src="./images/team/myhailo-yermakov.jpg" alt="Фотографія Михайла Єрмакова" width="270">
+                        <img class="team__photo" 
+                            src="./images/team/myhailo-yermakov.jpg" alt="Фотографія Михайла Єрмакова" width="">
                         <div class="team__meta">
                             <h3 class="team__name">Михайло Єрмаков</h3>
                             <p class="team__role" lang="en">UI Designer</p>
@@ -440,7 +449,7 @@
     <!-- FOOTER -->
     <footer class="page-footer">
         <div class="page-footer__flex-container container">
-            <div class="address page-footer__address">
+            <div class="address">
                 <a class="logo address__logo" href="./index.html">Web<span class="logo--dark-theme">Studio</span></a>
                 <address>
                     <ul class="address__list">
@@ -458,33 +467,33 @@
                     </ul>
                 </address>
             </div>
-            <div class="media">
-                <p class="subtitle--dark-theme media__subtitle">Приєднуйтесь</p>
-                <ul class="media__list">
-                    <li class="media__item">
-                        <a class="media__link" href="">
-                            <svg class="media__icon" aria-label="instagram" width="20" height="20">
+            <div class="footer-media">
+                <p class="subtitle subtitle--dark-theme footer-media__subtitle">Приєднуйтесь</p>
+                <ul class="footer-media__list">
+                    <li class="footer-media__item">
+                        <a class="footer-media__link" href="">
+                            <svg class="footer-media__icon" aria-label="instagram" width="20" height="20">
                                 <use href="./images/sprite.svg#instagram"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="media__item">
-                        <a class="media__link" href="">
-                            <svg class="media__icon" aria-label="twitter" width="20" height="20">
+                    <li class="footer-media__item">
+                        <a class="footer-media__link" href="">
+                            <svg class="footer-media__icon" aria-label="twitter" width="20" height="20">
                                 <use href="./images/sprite.svg#twitter"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="media__item">
-                        <a class="media__link" href="">
-                            <svg class="media__icon" aria-label="facebook" width="20" height="20">
+                    <li class="footer-media__item">
+                        <a class="footer-media__link" href="">
+                            <svg class="footer-media__icon" aria-label="facebook" width="20" height="20">
                                 <use href="./images/sprite.svg#facebook"></use>
                             </svg>
                         </a>
                     </li>
-                    <li class="media__item">
-                        <a class="media__link" href="">
-                            <svg class="media__icon" aria-label="linkedin" width="20" height="20">
+                    <li class="footer-media__item">
+                        <a class="footer-media__link" href="">
+                            <svg class="footer-media__icon" aria-label="linkedin" width="20" height="20">
                                 <use href="./images/sprite.svg#linkedin"></use>
                             </svg>
                         </a>
@@ -492,13 +501,13 @@
                 </ul>
             </div>
             <div class="subscr-form page-footer__subscr-form">
-                <p class="subtitle--dark-theme subscr-form__subtitle">Підпишіться на розсилку</p>
+                <p class="subtitle subtitle--dark-theme subscr-form__subtitle">Підпишіться на розсилку</p>
                 <form class="subscr-form__body">
                     <label class="subscr-form__field">
                         <input class="subscr-form__input" type="email" name="email" placeholder=" ">
                         <span class="subscr-form__label">E-mail</span>
                     </label>
-                    <button class="basic-button" type="submit">
+                    <button class="basic-button page-footer__basic-button" type="submit">
                         <span>Підписатись</span>
                         <svg class="basic-button__icon basic-button__icon--right" width="24" height="24">
                             <use href="./images/sprite.svg#send"></use>

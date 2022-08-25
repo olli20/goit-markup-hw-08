@@ -161,6 +161,7 @@
 .page-nav__menu-button {
     width: 40px;
     height: 40px;
+    line-height: 0;
 
     display: block;
     margin: 0;
@@ -187,5 +188,16 @@
 
     @media screen and (min-width: $tablet) {
         display: none;
+    }
+}
+
+.icon-open,
+.icon-close {
+    width: 40px;
+    height: 40px;
+
+    .page-nav__menu-button:hover &,
+    .page-nav__menu-button:focus & {
+        fill: getColor('accent');
     }
 }
