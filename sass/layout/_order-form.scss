@@ -1,0 +1,151 @@
+.order-form {
+    text-align: center;
+}
+
+.order-form__title {
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.03em;
+}
+
+.order-form__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    text-align: left;
+
+    &:last-of-type {
+        margin-bottom: 20px;
+    }
+}
+
+.order-form__label {
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: getColor('text-secondary');
+}
+
+.order-form__input {
+    height: 40px;
+    padding-left: 42px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border-color 250ms $timing-function;
+}
+
+.order-form__input:focus,
+.order-form__comment:focus {
+    outline: none;
+    border-color: getColor('accent');
+}
+
+.order-form__icon {
+    position: absolute;
+    left: 12px;
+    bottom: 50%;
+    transform: translateY(100%);
+    fill: getColor('text-primary');
+
+    transition: fill 250ms $timing-function;
+
+    .order-form__input:focus+& {
+        fill: getColor('accent');
+    }
+}
+
+.order-form__comment {
+    resize: none;
+    min-height: 120px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    &::placeholder {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+
+// mix
+.order-form__basic-button {
+    margin: 0 auto;
+}
+
+// CUSTOM CHECKBOX
+
+.checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.checkbox__checked-icon,
+.checkbox__unchecked-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.checkbox__checked-icon {
+    border-radius: 2px;
+    background-color: getColor('accent');
+    fill: getColor('white');
+    stroke: getColor('white');
+
+    opacity: 0;
+
+    transition: opacity 250ms $timing-function;
+
+    .checkbox__input:checked~& {
+        opacity: 1;
+    }
+}
+
+.checkbox__unchecked-icon {
+    background-color: getColor('white');
+    fill: getColor('text-primary');
+
+    opacity: 1;
+
+    transition: opacity 250ms $timing-function,
+        fill 250ms $timing-function;
+
+    .checkbox__input:checked~& {
+        opacity: 0;
+    }
+
+    .checkbox:focus-within>& {
+        fill: getColor('accent');
+    }
+}
+
+.checkbox__label {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    color: getColor('text-secondary');
+
+    & a {
+        color: getColor('accent');
+    }
+
+    @media screen and (min-width: $desktop) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
+}

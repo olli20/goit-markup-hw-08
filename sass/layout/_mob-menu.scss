@@ -7,7 +7,6 @@
 
 .mob-menu {
     @extend %list;
-
     flex-grow: 1;
 }
 
@@ -16,32 +15,28 @@
 }
 
 .mob-nav__container {
-        display: none;
+    display: none;
 
-        position: fixed;
-        top: 0;
-        left: 0;
-        margin: 0 auto;
-        width: 100%;
-        height: 100vh;
-        padding: 48px 40px;
-        z-index: 50000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    padding: 48px 40px;
+    z-index: 50000;
 
-        background-color: white;
+    background-color: white;
 
-        &.is-open {
-            display: flex;
-            flex-direction: column;
-        }
+    &.is-open {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
-
-
-.mob-menu__item {
-    @media screen and (max-width: calc($tablet - 1px)) {
-        &:not(:last-child) {
-            margin-bottom: 32px;
-        }
+.mob-menu__item {    
+    &:not(:last-child) {
+        margin-bottom: 32px;
     }
 }
 
@@ -61,45 +56,44 @@
     &:focus {
         color: getColor('accent');
     }
+
+    // &--current {
+    //     color: getColor('accent');
+    // }
 }
 
 .mob-menu__contacts {
     @extend %list;
 }
 
-.mob-menu__link {
-    @extend %link;
-    display: block;
-
-    color: getColor('text-secondary');
-
-    &:hover {
-        color: getColor('accent');
-    }
-}
 
 .mob-menu__tel {
-    @media screen and (max-width: calc($tablet - 1px)) {
-        margin-bottom: 32px;
+    @extend %link;
+    display: block;
+    margin-bottom: 32px;
     
-        color: getColor('accent');
-        font-weight: 500;
-        font-size: 34px;
-        line-height: 1.18;
-        letter-spacing: 0.02em;
-
-    }
+    color: getColor('accent');
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
 }
 
 .mob-menu__email {
-    @media screen and (max-width: calc($tablet - 1px)) {
-        margin-bottom: 64px;
-                
-        font-weight: 500;
-        font-size: 24px;
-        line-height: 1.17;
-        letter-spacing: 0.02em;
-    }    
+    @extend %link;
+    display: block;
+    margin-bottom: 64px;
+
+    color: getColor('text-secondary');
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    
+    &:hover,
+    &:focus {
+        color: getColor('accent');
+    }
 }
 
 
@@ -120,7 +114,6 @@
 
     &:not(:last-child)::after {
         content: "";
-
         margin-right: 10px;
         margin-left: 10px;
         border: 1px solid rgba(33, 33, 33, 0.2);
@@ -134,7 +127,7 @@
 
     font-weight: 500;
     font-size: 18px;
-    line-height: 22px;
+    line-height: 1.23;
     letter-spacing: 0.02em;
     color: getColor('accent');
 }
@@ -152,8 +145,6 @@
     cursor: pointer;
 
     z-index: 100000;
-
-
 
     & .icon-close {
         display: none;

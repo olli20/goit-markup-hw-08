@@ -11,9 +11,21 @@
 .page-header__container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     height: 100%;
 
     @media screen and (max-width: calc($tablet - 1px)) {
         justify-content: space-between;
     }
 }
+
+.page-nav {
+    display: flex;
+    align-items: center;
+
+}
+
+.page-nav__logo {
+    margin-right: 88px;
+}
+
