@@ -24,7 +24,7 @@
     width: 100%;
     height: 100vh;
     padding: 48px 40px;
-    z-index: 50000;
+    z-index: 5000;
 
     background-color: white;
 
@@ -43,6 +43,7 @@
 .mob-menu__link {
     @extend %link;
 
+    position: relative;
     color: getColor('text-primary');
 
     @media screen and (max-width: calc($tablet - 1px)) {
@@ -55,11 +56,28 @@
     &:hover,
     &:focus {
         color: getColor('accent');
+        padding-left: 3px;
+        padding-right: 3px;
     }
 
-    // &--current {
-    //     color: getColor('accent');
-    // }
+    &:hover::after,
+    &:focus::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: getColor('accent');
+    }
+
+    &--current {
+        color: getColor('accent');
+        padding-left: 3px;
+        padding-right: 3px;
+    }
 }
 
 .mob-menu__contacts {
@@ -144,7 +162,7 @@
     background-color: transparent;
     cursor: pointer;
 
-    z-index: 100000;
+    z-index: 10000;
 
     & .icon-close {
         display: none;

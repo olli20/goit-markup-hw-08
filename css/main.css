@@ -589,7 +589,7 @@ section {
   width: 100%;
   height: 100vh;
   padding: 48px 40px;
-  z-index: 50000;
+  z-index: 5000;
   background-color: white;
 }
 .mob-nav__container.is-open {
@@ -602,6 +602,7 @@ section {
 }
 
 .mob-menu__link {
+  position: relative;
   color: #212121;
 }
 @media screen and (max-width: 767px) {
@@ -614,6 +615,24 @@ section {
 }
 .mob-menu__link:hover, .mob-menu__link:focus {
   color: #2196F3;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+.mob-menu__link:hover::after, .mob-menu__link:focus::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #2196F3;
+}
+.mob-menu__link--current {
+  color: #2196F3;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .mob-menu__tel {
@@ -678,7 +697,7 @@ section {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  z-index: 100000;
+  z-index: 10000;
 }
 .menu-button .icon-close {
   display: none;
@@ -754,7 +773,7 @@ section {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 5;
+  z-index: 100000;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -773,7 +792,9 @@ section {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%) scale(1);
+  z-index: 200000;
   width: calc(100% - 30px);
+  max-width: 450px;
   padding: 40px;
   background-color: #FFFFFF;
   border-radius: 4px;
@@ -785,12 +806,12 @@ section {
 }
 @media screen and (min-width: 768px) {
   .modal {
-    width: 450px;
+    max-width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
-    width: 528px;
+    max-width: 528px;
   }
 }
 
@@ -800,6 +821,7 @@ section {
   right: 8px;
   width: 30px;
   height: 30px;
+  z-index: 300000;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   background-color: #FFFFFF;
