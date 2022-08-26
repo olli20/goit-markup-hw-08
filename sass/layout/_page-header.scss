@@ -7,3 +7,13 @@
         height: 60px;
     }
 }
+
+.page-header__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    @media screen and (max-width: calc($tablet - 1px)) {
+        justify-content: space-between;
+    }
+}

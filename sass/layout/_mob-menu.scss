@@ -1,25 +1,21 @@
 // common styles
-.menu {
-    @extend %list;
-}
-
-.menu__item {
-    @extend %link;
-}
-
-.page-nav {
-    display: flex;
-    align-items: center;
-    height: 100%;
-
-    @media screen and (max-width: calc($tablet - 1px)) {
-        justify-content: space-between;
+.mob-nav {
+    @media screen and (min-width: $tablet) {
+        display: none;
     }
 }
 
-.page-nav__menu-container {
+.mob-menu {
+    @extend %list;
 
-    @media screen and (max-width: calc($tablet - 1px)) {
+    flex-grow: 1;
+}
+
+.mob-menu__item {
+    @extend %link;
+}
+
+.mob-nav__container {
         display: none;
 
         position: fixed;
@@ -37,16 +33,11 @@
             display: flex;
             flex-direction: column;
         }
-    }
 }
 
-.menu {
-    @extend %list;
 
-    flex-grow: 1;
-}
 
-.menu__item {
+.mob-menu__item {
     @media screen and (max-width: calc($tablet - 1px)) {
         &:not(:last-child) {
             margin-bottom: 32px;
@@ -54,7 +45,7 @@
     }
 }
 
-.menu__link {
+.mob-menu__link {
     @extend %link;
 
     color: getColor('text-primary');
@@ -72,16 +63,11 @@
     }
 }
 
-.contacts {
+.mob-menu__contacts {
     @extend %list;
-    display: flex;
-    
-    @media screen and (max-width: calc($tablet - 1px)) {
-        flex-direction: column-reverse;
-    }
 }
 
-.contacts__link {
+.mob-menu__link {
     @extend %link;
     display: block;
 
@@ -92,7 +78,7 @@
     }
 }
 
-.contacts__mob-tel {
+.mob-menu__tel {
     @media screen and (max-width: calc($tablet - 1px)) {
         margin-bottom: 32px;
     
@@ -105,7 +91,7 @@
     }
 }
 
-.contacts__mob-email {
+.mob-menu__email {
     @media screen and (max-width: calc($tablet - 1px)) {
         margin-bottom: 64px;
                 
@@ -116,13 +102,8 @@
     }    
 }
 
-.contacts__icon {
-    @media screen and (max-width: calc($tablet - 1px)) {
-        display: none;
-    }
-}
 
-.media {
+.mob-media {
     @extend %list;
 
     display:flex;
@@ -134,7 +115,7 @@
     }
 }
 
-.media__item {
+.mob-media__item {
     display: inline-block;
 
     &:not(:last-child)::after {
@@ -148,7 +129,7 @@
 
 }
 
-.media__link {
+.mob-media__link {
     @extend %link;
 
     font-weight: 500;
@@ -158,7 +139,7 @@
     color: getColor('accent');
 }
 
-.page-nav__menu-button {
+.menu-button {
     width: 40px;
     height: 40px;
     line-height: 0;
@@ -196,8 +177,8 @@
     width: 40px;
     height: 40px;
 
-    .page-nav__menu-button:hover &,
-    .page-nav__menu-button:focus & {
+    .menu-button:hover &,
+    .menu-button:focus & {
         fill: getColor('accent');
     }
 }

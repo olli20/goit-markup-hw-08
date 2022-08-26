@@ -16,51 +16,80 @@
 <body>
     <!-- HEADER -->
     <header class="page-header">
-        <div class="page-header__flex-container container">
-            <nav class="page-nav">
-                <a class="logo page-nav__logo" href="./index.html">Web<span class="logo--light-theme">Studio</span></a>
+        <nav class="page-nav container">
+            <a class="logo page-nav__logo" href="./index.html">Web<span class="logo--light-theme">Studio</span></a>
+    
+            <div class="page-nav__menu-container" id="menu-container" data-menu>
                 <ul class="menu">
                     <li class="menu__item">
-                        <a class="menu__link" href="./index.html">Студія</a>
+                        <a class="menu__link menu__link--current" href="./index.html">Студія</a>
                     </li>
                     <li class="menu__item">
-                        <a class="menu__link menu__link--current" href="./portfolio.html">Портфоліо</a>
+                        <a class="menu__link" href="./portfolio.html">Портфоліо</a>
                     </li>
                     <li class="menu__item">
                         <a class="menu__link" href="./contacts.html">Контакти</a>
                     </li>
                 </ul>
-            </nav>
     
-            <ul class="contact">
-                <li class="contact__item">
-                    <a class="contact__link" href="mailto:info@devstudio.com">
-                        <svg class="contact__icon" width="16" height="12">
-                            <use href="./images/sprite.svg#envelope"></use>
-                        </svg>
-                        info@devstudio.com
-                    </a>
-                </li>
-                <li class="contact__item">
-                    <a class="contact__link" href="tel:+380961111111">
-                        <svg class="contact__icon" width="10" height="16">
-                            <use href="./images/sprite.svg#smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11
-                    </a>
-                </li>
-            </ul>
-        </div>
+                <ul class="contacts">
+                    <li class="contacts__item">
+                        <a class="contacts__link contacts__mob-email" href="mailto:info@devstudio.com">
+                            <svg class="contacts__icon" width="16" height="12">
+                                <use href="./images/sprite.svg#envelope"></use>
+                            </svg>
+                            info@devstudio.com
+                        </a>
+                    </li>
+                    <li class="contacts__item">
+                        <a class="contacts__link contacts__mob-tel" href="tel:+380961111111">
+                            <svg class="contacts__icon" width="10" height="16">
+                                <use href="./images/sprite.svg#smartphone"></use>
+                            </svg>
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
+    
+                <ul class="media">
+                    <li class="media__item">
+                        <a href="" class="media__link">Instagram</a>
+                    </li>
+                    <li class="media__item">
+                        <a href="" class="media__link">Twitter</a>
+                    </li>
+                    <li class="media__item">
+                        <a href="" class="media__link">Facebook</a>
+                    </li>
+                    <li class="media__item">
+                        <a href="" class="media__link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Modal menu button -->
+            <button class="page-nav__menu-button" type="button" aria-expanded="false" aria-controls="menu-container"
+                data-menu-button>
+                <svg width="40" height="40" aria-label="Mobile Menu Switcher">
+                    <use class="icon-open" href="./images/sprite-before-optimisation.svg#menu">
+                    </use>
+                    <use class="icon-close" href="./images/sprite-before-optimisation.svg#close">
+                    </use>
+                </svg>
+    
+            </button>
+        </nav>
+    
     </header>
 
     <!-- MAIN CONTENT -->
     <main>
-        <section class="portfolio">
+        <section class="portfolio section">
             <div class="container">
                 <h1 class="visually-hidden">Наші проекти</h1>
                 
                 <!-- FILTER -->
-                <ul class="filter portfolio__filter">
+                <ul class="filter">
                     <li class="filter__item">
                         <button class="filter__button filter__button--current" type="button">Всі</button>
                     </li>
@@ -83,7 +112,7 @@
                     <li class="gallery__item">
                         <a class="gallery__link" href="">
                             <div class="gallery__thumb">
-                                <img src="./images/portfolio/project-01.jpg" alt="Сайт Технокряк на екрані ноутбука" width="370" height="294">
+                                <img class="gallery__img" src="./images/portfolio/project-01.jpg" alt="Сайт Технокряк на екрані ноутбука">
                                 <p class="gallery__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати
                                 вичерпні відомості про компанію чи приватну особу.</p>                                
                             </div>
@@ -97,8 +126,7 @@
                     <li class="gallery__item">
                         <a class="gallery__link" href="">
                             <div class="gallery__thumb">
-                                <img src="./images/portfolio/project-02.jpg" alt="Постер із зображенням двох баскетболістів у грі" width="370"
-                                    height="294">
+                                <img class="gallery__img" src="./images/portfolio/project-02.jpg" alt="Постер із зображенням двох баскетболістів у грі">
                                 <p class="gallery__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -111,7 +139,7 @@
                     <li class="gallery__item">
                         <a class="gallery__link" href="">
                             <div class="gallery__thumb">
-                                <img src="./images/portfolio/project-03.jpg" alt="Логотип ресторана Seafood" width="370" height="294">
+                                <img class="gallery__img" src="./images/portfolio/project-03.jpg" alt="Логотип ресторана Seafood">
                                 <p class="gallery__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -124,7 +152,7 @@
                     <li class="gallery__item">
                         <a class="gallery__link" href="">
                             <div class="gallery__thumb">
-                                <img src="./images/portfolio/project-04.jpg" alt="Фотографія навушників" width="370" height="294">
+                                <img class="gallery__img" src="./images/portfolio/project-04.jpg" alt="Фотографія навушників">
                                 <p class="gallery__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -137,7 +165,7 @@
                     <li class="gallery__item">
                         <a class="gallery__link" href="">
                             <div class="gallery__thumb">
-                                <img src="./images/portfolio/project-05.jpg" alt="Дві коробки" width="370" height="294">
+                                <img class="gallery__img" src="./images/portfolio/project-05.jpg" alt="Дві коробки">
                                 <p class="gallery__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>     
@@ -150,7 +178,7 @@
                     <li class="gallery__item">
                         <a class="gallery__link" href="">
                             <div class="gallery__thumb">
-                                <img src="./images/portfolio/project-06.jpg" alt="Монітор з відкритим сайтом" width="370" height="294">
+                                <img class="gallery__img" src="./images/portfolio/project-06.jpg" alt="Монітор з відкритим сайтом">
                                 <p class="gallery__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -163,7 +191,7 @@
                     <li class="gallery__item">
                         <a class="gallery__link" href="">
                             <div class="gallery__thumb">
-                                <img src="./images/portfolio/project-07.jpg" alt="Розгорт буклета Limited Edition" width="370" height="294">
+                                <img class="gallery__img" src="./images/portfolio/project-07.jpg" alt="Розгорт буклета Limited Edition">
                                 <p class="gallery__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -176,7 +204,7 @@
                     <li class="gallery__item">
                         <a class="gallery__link" href="">
                             <div class="gallery__thumb">
-                                <img src="./images/portfolio/project-08.jpg" alt="Бірка із надписом Lab el Tag" width="370" height="294">
+                                <img class="gallery__img" src="./images/portfolio/project-08.jpg" alt="Бірка із надписом Lab el Tag">
                                 <p class="gallery__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -189,7 +217,7 @@
                     <li class="gallery__item">
                         <a class="gallery__link" href="">
                             <div class="gallery__thumb">
-                                <img src="./images/portfolio/project-09.jpg" alt="Ноутбук із відкритим додатком" width="370" height="294">
+                                <img class="gallery__img" src="./images/portfolio/project-09.jpg" alt="Ноутбук із відкритим додатком">
                                 <p class="gallery__description">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це
                                     дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
                             </div>
@@ -206,66 +234,68 @@
     
     <!-- FOOTER -->
     <footer class="page-footer">
-        <div class="page-footer__flex-container container">
-            <div class="address page-footer__address">
-                <a class="logo address__logo" href="./index.html">Web<span class="logo--dark-theme">Studio</span></a>
-                <address>
-                    <ul class="address__list">
-                        <li class="address__item">
-                            <a class="address__link address__link--white" href="https://goo.gl/maps/znAoFixmfx8EE9X49"
-                                target="_blank" rel="noopener noreferrer">
-                                м. Київ, пр-т Лесі Українки, 26</a>
+        <div class="page-footer__desktop-container container">
+            <div class="page-footer__address-media-container">
+                <div class="address">
+                    <a class="logo address__logo" href="./index.html">Web<span class="logo--dark-theme">Studio</span></a>
+                    <address>
+                        <ul class="address__list">
+                            <li class="address__item">
+                                <a class="address__link address__link--white" href="https://goo.gl/maps/znAoFixmfx8EE9X49"
+                                    target="_blank" rel="noopener noreferrer">
+                                    м. Київ, пр-т Лесі Українки, 26</a>
+                            </li>
+                            <li class="address__item">
+                                <a class="address__link" href="mailto:info@example.com">info@example.com</a>
+                            </li>
+                            <li class="address__item">
+                                <a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                            </li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="footer-media">
+                    <p class="subtitle subtitle--dark-theme footer-media__subtitle">Приєднуйтесь</p>
+                    <ul class="footer-media__list">
+                        <li class="footer-media__item">
+                            <a class="footer-media__link" href="">
+                                <svg class="footer-media__icon" aria-label="instagram" width="20" height="20">
+                                    <use href="./images/sprite.svg#instagram"></use>
+                                </svg>
+                            </a>
                         </li>
-                        <li class="address__item">
-                            <a class="address__link" href="mailto:info@example.com">info@example.com</a>
+                        <li class="footer-media__item">
+                            <a class="footer-media__link" href="">
+                                <svg class="footer-media__icon" aria-label="twitter" width="20" height="20">
+                                    <use href="./images/sprite.svg#twitter"></use>
+                                </svg>
+                            </a>
                         </li>
-                        <li class="address__item">
-                            <a class="address__link" href="tel:+380961111111">+38 096 111 11 11</a>
+                        <li class="footer-media__item">
+                            <a class="footer-media__link" href="">
+                                <svg class="footer-media__icon" aria-label="facebook" width="20" height="20">
+                                    <use href="./images/sprite.svg#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="footer-media__item">
+                            <a class="footer-media__link" href="">
+                                <svg class="footer-media__icon" aria-label="linkedin" width="20" height="20">
+                                    <use href="./images/sprite.svg#linkedin"></use>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
-                </address>
-            </div>
-            <div class="media">
-                <p class="subtitle--dark-theme media__subtitle">Приєднуйтесь</p>
-                <ul class="media__list">
-                    <li class="media__item">
-                        <a class="media__link" href="">
-                            <svg class="media__icon" aria-label="instagram" width="20" height="20">
-                                <use href="./images/sprite.svg#instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="media__item">
-                        <a class="media__link" href="">
-                            <svg class="media__icon" aria-label="twitter" width="20" height="20">
-                                <use href="./images/sprite.svg#twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="media__item">
-                        <a class="media__link" href="">
-                            <svg class="media__icon" aria-label="facebook" width="20" height="20">
-                                <use href="./images/sprite.svg#facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="media__item">
-                        <a class="media__link" href="">
-                            <svg class="media__icon" aria-label="linkedin" width="20" height="20">
-                                <use href="./images/sprite.svg#linkedin"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
+                </div>
             </div>
             <div class="subscr-form page-footer__subscr-form">
-                <p class="subtitle--dark-theme subscr-form__subtitle">Підпишіться на розсилку</p>
+                <p class="subtitle subtitle--dark-theme subscr-form__subtitle">Підпишіться на розсилку</p>
                 <form class="subscr-form__body">
                     <label class="subscr-form__field">
                         <input class="subscr-form__input" type="email" name="email" placeholder=" ">
                         <span class="subscr-form__label">E-mail</span>
                     </label>
-                    <button class="basic-button" type="submit">
+                    <button class="basic-button page-footer__basic-button" type="submit">
                         <span>Підписатись</span>
                         <svg class="basic-button__icon basic-button__icon--right" width="24" height="24">
                             <use href="./images/sprite.svg#send"></use>
@@ -275,6 +305,9 @@
             </div>
         </div>
     </footer>
+    
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 
     
 </body>
