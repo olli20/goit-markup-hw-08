@@ -1,37 +1,88 @@
-// common styles
-.mob-nav {
+
+.menu-button-open {
+    width: 40px;
+    height: 40px;
+    line-height: 0;
+
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    z-index: 1000;
+
+    &:hover .menu-button-open__icon {
+        fill: getColor('accent');
+    }
+
     @media screen and (min-width: $tablet) {
         display: none;
     }
 }
-
-.mob-menu {
-    @extend %list;
-    flex-grow: 1;
-}
-
-.mob-menu__item {
-    @extend %link;
-}
-
-.mob-nav__container {
-    display: none;
-
+        
+.mob-nav {    
     position: fixed;
     top: 0;
     left: 0;
     margin: 0 auto;
     width: 100%;
     height: 100vh;
-    padding: 48px 40px;
+
     z-index: 5000;
 
     background-color: white;
 
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 500ms $timing-function, visibility 500ms $timing-function;
+
     &.is-open {
-        display: flex;
-        flex-direction: column;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
     }
+}
+
+.mob-nav__container {
+    position: relative;
+    width: 100%;
+    height: 100%;;
+    margin: 0 auto;
+    max-width: $mobile;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 48px 25px;
+}
+
+.menu-button-close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+
+    width: 40px;
+    height: 40px;
+    line-height: 0;
+
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover .menu-button-close__icon {
+        fill: getColor('accent');
+    }
+}
+
+.mob-menu {
+    @extend %list;
+    flex-grow: 1;
 }
 
 .mob-menu__item {    
@@ -46,12 +97,11 @@
     position: relative;
     color: getColor('text-primary');
 
-    @media screen and (max-width: calc($tablet - 1px)) {
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 1.18;
-        letter-spacing: 0.02em;
-    }
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+
 
     &:hover,
     &:focus {
@@ -84,7 +134,6 @@
     @extend %list;
 }
 
-
 .mob-menu__tel {
     @extend %link;
     display: block;
@@ -114,17 +163,11 @@
     }
 }
 
-
 .mob-media {
     @extend %list;
 
     display:flex;
     flex-wrap: wrap;
-    
-
-    @media screen and (min-width: $tablet) {
-        display: none;
-    }
 }
 
 .mob-media__item {
@@ -137,7 +180,6 @@
         border: 1px solid rgba(33, 33, 33, 0.2);
         height: 22px;
     }
-
 }
 
 .mob-media__link {
@@ -150,44 +192,9 @@
     color: getColor('accent');
 }
 
-.menu-button {
-    width: 40px;
-    height: 40px;
-    line-height: 0;
-
-    display: block;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-
-    z-index: 10000;
-
-    & .icon-close {
-        display: none;
-    }
-
-    &.is-open .icon-close {
-        display: block;
-    }
-
-    &.is-open .icon-open {
-        display: none;
-    }
-
-    @media screen and (min-width: $tablet) {
+@media screen and (min-width: $tablet) {
+    .mob-nav {
         display: none;
     }
 }
 
-.icon-open,
-.icon-close {
-    width: 40px;
-    height: 40px;
-
-    .menu-button:hover &,
-    .menu-button:focus & {
-        fill: getColor('accent');
-    }
-}

@@ -7,7 +7,6 @@
 }
 
 .gallery__item {
-    outline: 1px solid red;
 
     @media screen and (max-width: calc($tablet - 1px)) {
         width: 100%;
@@ -61,6 +60,9 @@
 
 .gallery__link {
     @extend %link;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .gallery__thumb {
@@ -94,10 +96,14 @@
 }
 
 .gallery__meta {
+    flex-grow: 1;
+
     padding: 20px 24px;
     border-left: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
+
+    
 }
 
 .gallery__project-title {
