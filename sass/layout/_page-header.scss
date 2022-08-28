@@ -1,10 +1,10 @@
 .page-header {
     position: relative;
-    height: 80px;
+    height: 60px;
     border-bottom: 1px solid #ECECEC;
 
-    @media screen and (max-width: calc($tablet - 1px)) {
-        height: 60px;
+    @media screen and (min-width: $tablet) {
+        height: 80px;
     }
 }
 
@@ -22,10 +22,33 @@
 .page-nav {
     display: flex;
     align-items: center;
+}
 
+.menu-button-open {
+    width: 40px;
+    height: 40px;
+    line-height: 0;
+
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    z-index: 1000;
+
+    &:hover .menu-button-open__icon {
+        fill: getColor('accent');
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
 }
 
 .page-nav__logo {
-    margin-right: 88px;
+    @media screen and (min-width: $tablet) {
+        margin-right: 88px;
+    }
 }
-

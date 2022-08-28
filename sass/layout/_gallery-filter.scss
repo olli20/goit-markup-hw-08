@@ -22,6 +22,12 @@
     &:not(:last-child) {
         margin-right: 8px;
     }
+
+    @media screen and (min-width: 433px) and (max-width: calc($tablet - 1px)) {
+        &:nth-child(3n) {
+            margin-right: 80px;
+        }
+    }
 }
 
 .filter__button {

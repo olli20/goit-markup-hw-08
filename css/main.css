@@ -449,12 +449,12 @@ section {
 
 .page-header {
   position: relative;
-  height: 80px;
+  height: 60px;
   border-bottom: 1px solid #ECECEC;
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 768px) {
   .page-header {
-    height: 60px;
+    height: 80px;
   }
 }
 
@@ -475,8 +475,31 @@ section {
   align-items: center;
 }
 
-.page-nav__logo {
-  margin-right: 88px;
+.menu-button-open {
+  width: 40px;
+  height: 40px;
+  line-height: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1000;
+}
+.menu-button-open:hover .menu-button-open__icon {
+  fill: #2196F3;
+}
+@media screen and (min-width: 768px) {
+  .menu-button-open {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .page-nav__logo {
+    margin-right: 88px;
+  }
 }
 
 .menu {
@@ -568,27 +591,6 @@ section {
 
 .contacts__icon {
   margin-right: 10px;
-}
-
-.menu-button-open {
-  width: 40px;
-  height: 40px;
-  line-height: 0;
-  display: block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  z-index: 1000;
-}
-.menu-button-open:hover .menu-button-open__icon {
-  fill: #2196F3;
-}
-@media screen and (min-width: 768px) {
-  .menu-button-open {
-    display: none;
-  }
 }
 
 .mob-nav {
@@ -1300,6 +1302,11 @@ section {
 
 .filter__item:not(:last-child) {
   margin-right: 8px;
+}
+@media screen and (min-width: 433px) and (max-width: 767px) {
+  .filter__item:nth-child(3n) {
+    margin-right: 80px;
+  }
 }
 
 .filter__button {

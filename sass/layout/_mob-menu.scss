@@ -1,28 +1,6 @@
 
-.menu-button-open {
-    width: 40px;
-    height: 40px;
-    line-height: 0;
 
-    display: block;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-
-    z-index: 1000;
-
-    &:hover .menu-button-open__icon {
-        fill: getColor('accent');
-    }
-
-    @media screen and (min-width: $tablet) {
-        display: none;
-    }
-}
-        
-.mob-nav {    
+        .mob-nav {    
     position: fixed;
     top: 0;
     left: 0;
