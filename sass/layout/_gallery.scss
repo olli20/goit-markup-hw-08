@@ -86,11 +86,10 @@
     letter-spacing: 0.03em;
 
     transform: translateY(101%);
-
     transition: transform 250ms $timing-function;
 
-    .gallery__item:hover &,
-    .gallery__item:focus & {
+    .gallery__link:hover &,
+    .gallery__link:focus & {
         transform: translateY(0%);
     }
 }
@@ -102,8 +101,6 @@
     border-left: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
-
-    
 }
 
 .gallery__project-title {

@@ -15,8 +15,7 @@
 .team__item {
     width: 100%;
 
-    background-color: getColor('white');
-    
+    background-color: getColor('white');   
     text-align: center;
     
     border-bottom-right-radius: 4px;
@@ -30,7 +29,6 @@
             margin-bottom: 30px;
         }
     }
-
 
     @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
         width: calc((100% - 30px) / 2);
