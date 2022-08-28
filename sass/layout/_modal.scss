@@ -42,9 +42,8 @@
     transition: transform 250ms $timing-function;
 
     .backdrop.is-hidden & {
-            transform: translateX(-50%) translateY(0%) scale(1.05);
-        }
-
+        transform: translateX(-50%) translateY(0%) scale(1.05);
+    }
 
     @media screen and (min-width: $tablet) {
         top: 50%;
@@ -53,15 +52,14 @@
         max-width: 450px;
 
         .backdrop.is-hidden & {
-                transform: translateX(-50%) translateY(-50%) scale(1.05);
-            }
+            transform: translateX(-50%) translateY(-50%) scale(1.05);
+        }
     }
 
     @media screen and (min-width: $desktop) {
         max-width: 528px;
     }
 }
-
  
 .close-button {
     @extend %center-flex-container;
