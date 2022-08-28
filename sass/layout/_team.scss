@@ -3,7 +3,11 @@
 }
 
 .team__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
+    }
 }
 
 .team__list {

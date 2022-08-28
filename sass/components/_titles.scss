@@ -1,19 +1,35 @@
-.title--light-theme {
-    @extend %title;
-    color: getColor('text-primary');
-}
+ .title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-align: center;
 
-.title--dark-theme {
-    @extend %title;
-    color: getColor('white');
-}
+    @media screen and (min-width: $desktop) {
+        font-size: 36px;
+    }
 
-.subtitle--light-theme {
-    @extend %subtitle;
-    color: getColor('text-primary');
-}
+    // &--light-theme {
+    //     color: getColor('text-primary');
+    // }
 
-.subtitle--dark-theme {
-    @extend %subtitle;
-    color: getColor('white');
+    &--dark-theme {
+        color: getColor('white');
+    }
+ }
+
+.subtitle {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    // &--light-theme {
+    //     color: getColor('text-primary');
+    // }
+
+    &--dark-theme {
+        color: getColor('white');
+    }
 }
